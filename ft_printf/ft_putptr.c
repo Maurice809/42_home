@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmoret <marvin@42lausanne.ch>              +#+  +:+       +#+        */
+/*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 19:43:34 by tmoret            #+#    #+#             */
-/*   Updated: 2022/04/13 02:21:32 by tmoret           ###   ########.fr       */
+/*   Created: 2022/04/12 19:43:34 by Maurice809        #+#    #+#             */
+/*   Updated: 2022/04/17 14:25:19 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_putptr(unsigned long nbr, int *count)
 	}
 	else
 	{
-		if (nbr < 10 )
+		if (nbr < 10)
 			nbr += 48;
 		else
 			nbr += 87;
