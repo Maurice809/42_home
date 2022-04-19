@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 23:41:06 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/04/17 00:35:26 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/04/19 19:02:41 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,13 @@ int	ft_putstr(char *str, int *count)
 	return (*count);
 }
 
-int	ft_putnbr(int nbr, int *count, int base)
+int	ft_putnbr(long nbr, int *count, int base)
 {
+	if (nbr == -2147483648)
+	{
+		ft_putstr("-2147483648", count);
+		return (*count);
+	}
 	if (nbr < 0)
 	{
 		ft_putchar('-', count);
@@ -62,7 +67,7 @@ void	ft_args(va_list args, char input, int *count)
 	else if (input == 'd')
 		ft_putnbr(va_arg(args, int), count, 10);
 	else if (input == 'x')
-		ft_putnbr(va_arg(args, int), count, 16);
+		ft_putnbr(va_arg(args, long), count, 16);
 }
 
 int	ft_printf(const char *input, ...)
@@ -84,7 +89,6 @@ int	ft_printf(const char *input, ...)
 	return (count);
 }
 
-/*
 void	ft_hello(void)
 {
 	ft_printf("\n");
@@ -121,6 +125,9 @@ int	main(void)
 	ft_hello();
 	ft_decimal(a);
 	ft_xx(a);
+	a = -2147483648;
+    ft_hello();
+    ft_decimal(a);
+    ft_xx(a);
 	return (0);
 }
-*/
