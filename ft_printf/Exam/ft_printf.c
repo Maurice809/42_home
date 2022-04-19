@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 23:41:06 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/04/19 19:02:41 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/04/19 19:08:51 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ int	ft_printf(const char *input, ...)
 	return (count);
 }
 
+/*
 void	ft_hello(void)
 {
 	ft_printf("\n");
@@ -131,3 +132,4 @@ int	main(void)
     ft_xx(a);
 	return (0);
 }
+*/
