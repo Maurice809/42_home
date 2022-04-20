@@ -6,7 +6,7 @@
 #    By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/05 10:38:49 by Maurice809        #+#    #+#              #
-#    Updated: 2022/04/14 13:59:48 by tmoret           ###   ########.fr        #
+#    Updated: 2022/04/20 15:50:09 by tmoret           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC		= main.c \
 OBJ		= $(addprefix $(OBJDIR)/,$(SRC:.c=.o))
 
 # compiler
-CC		= clang
+CC		= cc
 CFLAGS	= -Wall -Wextra -Werror -g
 
 
