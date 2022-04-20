@@ -1,0 +1,62 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/05 09:17:34 by Maurice809        #+#    #+#             */
+/*   Updated: 2022/04/19 14:35:39 by tmoret           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include "mlx.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+
+int ft_pxl(int key, void *param)
+{
+	int i;
+	int x;
+	int y;
+	
+	printf ("%s", *param);
+	key = 0;
+	i = -1;
+/*	while (1)
+    {
+        while (++i < 48)
+        {
+            x = rand() % (640 + 1 - 0) + 0;
+            y = rand() % (480 + 1 - 0) + 0;
+            mlx_pixel_put(mlx, mlx_win, x, y, 0xFFFFFF);
+            sleep(1 / 1.5);
+        }
+        i = -1;
+        while (++i < 3000)
+        {
+            x = rand() % (640 + 1 - 0) + 0;
+            y = rand() % (480 + 1 - 0) + 0;
+            mlx_pixel_put(mlx, mlx_win, x, y, 0xFF00FF);
+            sleep(1 / 10);
+        }
+        i = -1;
+    }
+	*/
+	return (0);
+}
+
+int	main(void)
+{
+	void	*mlx;
+	void	*mlx_win;
+
+	mlx = mlx_init();
+	mlx_win = mlx_new_window(mlx, 640, 480, "Relax !");
+	mlx_key_hook(mlx_win, ft_pxl, param);
+	mlx_loop(mlx);
+	return (0);
+}

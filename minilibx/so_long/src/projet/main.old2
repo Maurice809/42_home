@@ -1,0 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/05 09:17:34 by Maurice809        #+#    #+#             */
+/*   Updated: 2022/02/05 11:00:33 by Maurice809       ###   Lausanne.ch       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include "mlx.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	void    *mlx;
+	mlx = mlx_init();
+	mlx_new_window(mlx, 640, 480, "Hello world!");
+	mlx_loop(mlx);
+}
