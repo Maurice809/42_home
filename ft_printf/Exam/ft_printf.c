@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 23:41:06 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/04/19 19:08:51 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/04/20 02:03:22 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-int	ft_putchar(char c, int *count)
+void	ft_putchar(char c, int *count)
 {
 	*count += write(1, &c, 1);
-	return (*count);
 }
 
-int	ft_putstr(char *str, int *count)
+void	ft_putstr(char *str, int *count)
 {
+	if (str == NULL)
+	{
+		ft_putstr("(null)", count);
+		return ;
+	}
 	while (*str)
 	{
 		ft_putchar(*str, count);
 		str++;
 	}
-	return (*count);
 }
 
-int	ft_putnbr(long nbr, int *count, int base)
+void	ft_putnbr(long nbr, int *count, int base)
 {
-	if (nbr == -2147483648)
-	{
-		ft_putstr("-2147483648", count);
-		return (*count);
-	}
 	if (nbr < 0)
 	{
 		ft_putchar('-', count);
@@ -55,7 +53,6 @@ int	ft_putnbr(long nbr, int *count, int base)
 			nbr += 87;
 		ft_putchar(nbr, count);
 	}
-	return (*count);
 }
 
 void	ft_args(va_list args, char input, int *count)
@@ -65,9 +62,9 @@ void	ft_args(va_list args, char input, int *count)
 	else if (input == 's')
 		ft_putstr(va_arg(args, char *), count);
 	else if (input == 'd')
-		ft_putnbr(va_arg(args, int), count, 10);
+		ft_putnbr((int)va_arg(args, int), count, 10);
 	else if (input == 'x')
-		ft_putnbr(va_arg(args, long), count, 16);
+		ft_putnbr((unsigned int)va_arg(args, int), count, 16);
 }
 
 int	ft_printf(const char *input, ...)
