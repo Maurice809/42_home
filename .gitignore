@@ -2,3 +2,4 @@
 *.swp
 **/util
 *.o
+a.out
