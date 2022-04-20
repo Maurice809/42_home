@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 23:41:06 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/04/20 02:03:22 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/04/20 02:11:03 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,48 +85,3 @@ int	ft_printf(const char *input, ...)
 	va_end (args);
 	return (count);
 }
-
-/*
-void	ft_hello(void)
-{
-	ft_printf("\n");
-	printf("-%d\n", printf("Hello World!\n"));
-	ft_printf("-%d\n", ft_printf("Hello World!\n"));
-	ft_printf("\n");
-	printf("-%d\n", printf("s |---| %s \n", "BNK"));
-	ft_printf("-%d\n", ft_printf("s |---| %s \n", "BNK"));
-	ft_printf("\n");
-}
-
-void	ft_decimal(int a)
-{
-	printf("-%d\n", printf("d |---| %d\n", a));
-	ft_printf("-%d\n", ft_printf("d |---| %d\n", a));
-	ft_printf("\n");
-}
-
-void	ft_xx(int a)
-{
-	printf("-%d\n", printf("x |---| %x\n", a));
-	ft_printf("-%d\n", ft_printf("x |---| %x\n", a));
-	ft_printf("\n");
-	printf("-%d\n", printf("%% \n"));
-	ft_printf("-%d\n", ft_printf("%% \n"));
-	ft_printf("\n");
-}
-
-int	main(void)
-{
-	int	a;
-
-	a = 48;
-	ft_hello();
-	ft_decimal(a);
-	ft_xx(a);
-	a = -2147483648;
-    ft_hello();
-    ft_decimal(a);
-    ft_xx(a);
-	return (0);
-}
-*/
