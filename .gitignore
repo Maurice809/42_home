@@ -3,3 +3,4 @@
 **/util
 *.o
 a.out
+*.a
