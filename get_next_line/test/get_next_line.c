@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 10:02:55 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/04/23 11:56:49 by Maurice809       ###   Lausanne.ch       */
+/*   Created: 2022/04/24 09:53:36 by Maurice809        #+#    #+#             */
+/*   Updated: 2022/04/24 10:26:48 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@ char *get_next_line(int fd)
 {
 	char c, *line;
 	int ret, i = -1;
-
+	
 	if (fd < 0)
-		return (NULL);
+		return NULL;
 	line = (char *)malloc(1);
 	line[0] = '\0';
 	while ((ret = read(fd, &c, 1)) > 0)
 	{
 		line = ft_strjoin(line, c);
 		if (c == '\n')
-			break ;
+			break;
 	}
-	while (line[++i]);
+	while(line[++i]);
 	if (i == 0 || ret == -1)
 	{
 		free(line);
-		line = NULL;
+		return NULL;
 	}
-	return (line);
+	return (line);	
 }
