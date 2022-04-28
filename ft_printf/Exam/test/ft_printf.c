@@ -6,7 +6,7 @@
 /*   By: tmoret <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:54:51 by tmoret            #+#    #+#             */
-/*   Updated: 2022/04/25 20:20:29 by tmoret           ###   ########.fr       */
+/*   Updated: 2022/04/27 13:22:22 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void ft_putnbr(long nbr, int *count, int base)
 	if (nbr < 0)
 	{
 		ft_putchar('-', count);
-		nbr *= - 1;
+		nbr = - 1;
 	}
 	if (nbr >= base)
 	{
