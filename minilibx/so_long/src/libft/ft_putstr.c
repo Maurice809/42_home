@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/29 10:35:26 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/05/02 21:26:33 by Maurice809       ###   Lausanne.ch       */
+/*   Created: 2022/04/12 19:35:36 by Maurice809        #+#    #+#             */
+/*   Updated: 2022/05/02 21:49:56 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-static int ft_error(void)
+int	ft_putstr(char *str, int *count)
 {
-	ft_printf("Error\nUse : ./so_long example_map.ber\n");
-	return (0);
-}
-
-int main(int argc, char *argv[])
-{
-	if (argc != 2)
-		return (ft_error());
-	if (ft_check(argv[1]))
+	if (str == NULL)
 	{
-		ft_printf("game");
+		ft_putstr("(null)", count);
+		return (*count);
+	}	
+	while (*str)
+	{
+		ft_putchar(*str, count);
+		str++;
 	}
-	else
-		ft_printf("Error\n");
-	return(1);
+	return (*count);
 }

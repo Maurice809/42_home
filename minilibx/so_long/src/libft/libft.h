@@ -6,7 +6,7 @@
 /*   By: tmoret <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:21:53 by tmoret            #+#    #+#             */
-/*   Updated: 2021/10/30 15:46:14 by tmoret           ###   ########.fr       */
+/*   Updated: 2022/05/02 21:51:29 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <stdarg.h>
 
 /* First partie */
 void				*ft_memset(void *b, int c, size_t len);
@@ -55,4 +56,11 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
+int     ft_printf(const char *input, ...);
+int     ft_putchar(char c, int *count);
+int     ft_putnbr(long nbr, int *count, int base, char input);
+int     ft_putptr(unsigned long nbr, int *count);
+void    ft_args(va_list args, char input, int *count);
+int     ft_putstr(char *str, int *count);
+int     ft_nbr(long nbr, int base, char input, int *count);
 #endif
