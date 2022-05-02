@@ -5,21 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/29 10:35:26 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/04/30 23:45:14 by Maurice809       ###   Lausanne.ch       */
+/*   Created: 2022/04/30 22:58:17 by Maurice809        #+#    #+#             */
+/*   Updated: 2022/05/01 09:21:13 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char *ft_bzero(char *s)
+{
+	int i;
+	char *str;
+	i = -1;
+	while(s[++i]);
+	str = (char *)malloc(i + 1);
+	if (!str)
+			return NULL;
+	i = -1;
+	while(s[++i])
+		str[i] = s[i];
+	str[i] ='\0';
+	free(s);
+	return(str);
+}
 
 int main(int argc, char *argv[])
 {
-	if (argc >2)
-		printf("123");
-	if ((char *)argv[1] == "-help")
-//		ft_check(argv[1]);
-		printf("help");
-	else
-		ft_error(argc, argv[1], argv[2]);
+	char hello[5];
+
+	hello = "Hello";
+	if (ft_bzero(argv[1]) == hello)
+		printf("good\n");
 	return(0);
 }
