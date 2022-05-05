@@ -6,7 +6,7 @@
 #    By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/05 10:38:49 by Maurice809        #+#    #+#              #
-#    Updated: 2022/05/02 21:28:33 by Maurice809       ###   Lausanne.ch        #
+#    Updated: 2022/05/03 13:38:34 by Maurice809       ###   Lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ OBJDIR	= ./src/obj
 
 # src / obj files
 SRC		= main.c \
+		  ft_check.c \
 		  $(addprefix so_long/,$(shell ls $(SRCDIR)/so_long | grep -E ".+\.c"))
 
 OBJ		= $(addprefix $(OBJDIR)/,$(SRC:.c=.o))
