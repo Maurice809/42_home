@@ -6,7 +6,7 @@
 #    By: mort0707 <maurice809@xfk48.com>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 00:00:48 by mort0707          #+#    #+#              #
-#    Updated: 2022/02/05 12:30:42 by Maurice809       ###   Lausanne.ch        #
+#    Updated: 2022/05/16 16:17:06 by tmoret           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,10 +52,25 @@ SRC_NAME	=	ft_memset.c \
 				ft_itoa.c \
 				ft_split.c
 
+BONUS		=	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+#				ft_lstlast.c \
+#				ft_lstadd_back.c \
+#				ft_lstdelone.c \
+#				ft_lstclear.c \
+#				ft_lstiter.c \
+#				ft_lstmap.c 
+
 OBJ_NAME	=	$(SRC_NAME:.c=.o)
 SRC			=	$(SRC_NAME)
 
-CC			=   cc
+OBJ_BONUS	= 	$(BONUS:.c=.o)
+SRC_BONUS	=   $(BONUS)
+
+CC			=   gcc
 CFLAGS		=	-Wall -Wextra -Werror -I.
 NAME		=	libft.a
 
@@ -65,11 +80,15 @@ $(NAME):
 	$(CC) -c $(CFLAGS) $(SRC) 
 	ar rcs $(NAME) $(OBJ_NAME)
 
+bonus:
+	$(CC) -c $(CFLAGS) $(SRC) $(SRC_BONUS)
+	ar rcs $(NAME) $(OBJ_NAME) $(OBJ_BONUS)
+
 clean:
-	rm -rf $(OBJ_NAME)
+	rm -rf $(OBJ_NAME) $(OBJ_BONUS)
 
 fclean:	clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(OBJ_BONUS)
 
 re: fclean all 
 
