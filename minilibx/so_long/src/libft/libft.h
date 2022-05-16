@@ -6,7 +6,7 @@
 /*   By: tmoret <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:21:53 by tmoret            #+#    #+#             */
-/*   Updated: 2022/05/02 21:51:29 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/05/03 14:18:47 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,14 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-
-int     ft_printf(const char *input, ...);
-int     ft_putchar(char c, int *count);
-int     ft_putnbr(long nbr, int *count, int base, char input);
-int     ft_putptr(unsigned long nbr, int *count);
-void    ft_args(va_list args, char input, int *count);
-int     ft_putstr(char *str, int *count);
-int     ft_nbr(long nbr, int base, char input, int *count);
+/* ft_printf */
+int					ft_printf(const char *input, ...);
+int					ft_putchar(char c, int *count);
+int					ft_putnbr(long nbr, int *count, int base, char input);
+int					ft_putptr(unsigned long nbr, int *count);
+void				ft_args(va_list args, char input, int *count);
+int					ft_putstr(char *str, int *count);
+int					ft_nbr(long nbr, int base, char input, int *count);
+/* special add */
+int					ft_strcmp(char *s1, char *s2);
 #endif

@@ -6,7 +6,7 @@
 #    By: mort0707 <maurice809@xfk48.com>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 00:00:48 by mort0707          #+#    #+#              #
-#    Updated: 2022/05/02 21:42:54 by Maurice809       ###   Lausanne.ch        #
+#    Updated: 2022/05/03 14:20:21 by Maurice809       ###   Lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,8 @@ SRC_NAME	=	ft_memset.c \
                 ft_putchar.c \
                 ft_putnbr.c \
                 ft_putstr.c \
-                ft_putptr.c
+                ft_putptr.c \
+				ft_strncmp.c
 
 OBJ_NAME	=	$(SRC_NAME:.c=.o)
 SRC			=	$(SRC_NAME)

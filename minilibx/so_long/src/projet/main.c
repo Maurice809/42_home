@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 10:35:26 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/05/02 21:26:33 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/05/03 13:48:55 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int ft_error(void)
 {
-	ft_printf("Error\nUse : ./so_long example_map.ber\n");
+	ft_printf("Error\nUse : ./so_long ./example_map.ber\n");
 	return (0);
 }
 

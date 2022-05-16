@@ -6,11 +6,11 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 17:24:15 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/05/02 21:52:34 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/05/03 14:18:05 by Maurice809       ###   Lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <libft.h>
+#include <libft.h>
 
 int	ft_putchar(char c, int	*count)
 {
