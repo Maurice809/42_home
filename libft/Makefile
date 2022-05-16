@@ -6,7 +6,7 @@
 #    By: mort0707 <maurice809@xfk48.com>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 00:00:48 by mort0707          #+#    #+#              #
-#    Updated: 2022/05/16 16:17:06 by tmoret           ###   ########.fr        #
+#    Updated: 2022/05/16 19:00:32 by tmoret           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,12 +57,12 @@ BONUS		=	ft_lstnew.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
 				ft_lstadd_back.c \
-#				ft_lstlast.c \
-#				ft_lstadd_back.c \
-#				ft_lstdelone.c \
-#				ft_lstclear.c \
-#				ft_lstiter.c \
-#				ft_lstmap.c 
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c 
 
 OBJ_NAME	=	$(SRC_NAME:.c=.o)
 SRC			=	$(SRC_NAME)
