@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    map.sh                                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mort0707 <thomas.moret@xfk48.com>          +#+  +:+       +#+         #
+#    By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/20 00:51:23 by mort0707          #+#    #+#              #
-#    Updated: 2022/05/20 04:23:49 by mort0707         ###   Lausanne.ch        #
+#    Created: 2022/05/20 00:51:23 by Maurice809        #+#    #+#              #
+#    Updated: 2022/05/20 08:59:26 by Maurice809       ###   Lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
+# BNK48! C'est cool! Mais Pretzelle, c'est encore mieux !                      #
 
 #!/bin/bash
-rm game48.ber >> /dev/null
 echo "-------------------------------"
 echo "| GENERATEUR DE MAP "SO LONG"   |"
 echo "-------------------------------"
@@ -26,6 +26,7 @@ pp=$(( 2 + $RANDOM % $rr ))
 
 e=$(( 2 + $RANDOM % $r ))
 ee=$(( 2 + $RANDOM % $rr ))
+eee=$(( 1 + $RANDOM % 5 ))
 
 i="0"
 ii="2"
@@ -64,6 +65,9 @@ do
 		elif [[ $o -eq 3 || $o -eq 6 || $o -eq 9 ]]
 		then
 			line+="1"
+		elif [[ $o -eq 8 && $eee -eq 3 ]]
+		then
+			line+="E"
 		else
 			line+="0"
 		fi
@@ -84,7 +88,8 @@ i=$[$i+1]
 done
 echo $line >> tempo.ber
 cat tempo.ber
-cat tempo.ber | tr "\n" "$" | sed 's/.$//' | tr "$" "\n" >> game48.ber
+date=$(date +%Y-%m-%d_%H%M%S)
+cat tempo.ber | tr "\n" "$" | sed 's/.$//' | tr "$" "\n" >> game-$date.ber
 rm tempo.ber
 echo "-------------------------------"
 echo "|    MADE WITH LOVE BNK 48    |"
